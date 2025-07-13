@@ -1,0 +1,49 @@
+.wrapper {
+    width: 100%;
+    background-color: #dee2b1;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 840px) {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contacts {
+        h2 {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+    }
+
+    .map_wrapper {
+        width: 70%;
+
+        @media (max-width: 840px) {
+            width: 100%;
+        }
+    }
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info_item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title{
+    color: linear-gradient(0deg, rgb(27, 67, 50) 0%, rgb(45, 106, 79) 100%);
+
+}

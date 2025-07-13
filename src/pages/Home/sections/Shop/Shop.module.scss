@@ -1,0 +1,75 @@
+@use "/src/styles/variables.scss" as vars;
+
+.wrapper{
+    width: 100%;
+    background-color: vars.$bg_color_white;
+    padding: 0 vars.$padding_x 50px vars.$padding_x;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products{
+    width: 100%;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    font-size: 1.5rem;
+    margin: 100px 0;
+    color: vars.$color_dark;
+    
+    & > .line {
+        width: 100%;
+        border: 1px solid #95D5B2;
+        margin: 20px 0;
+    }
+
+    & > p {
+        text-align: center;
+        font-size: 1rem;
+        color: grey;
+    }
+}
+
+.grid_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    gap: 20px ;
+    justify-content: space-around;
+}
+
+
+@media (min-width:768px) and (max-width: 992px) {
+    .title {
+        font-size: 1.2rem;
+        & > p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (min-width:576px) and (max-width:767px){
+    .title {
+        width: 70%;
+        font-size: 1.2rem;
+        & > p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media(max-width:575px){
+    .title {
+        width: 80%;
+        font-size: 1rem;
+        & > p {
+            font-size: 0.8rem;
+        }
+    }
+}
